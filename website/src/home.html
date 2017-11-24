@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="fr">
+  <!-- angular js -->
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-aria.min.js"></script>
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script>
+   <!-- <script type="text/javascript" src="https://code.angularjs.org/1.3.0-rc.2/angular-messages.js"></script> -->
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+   <!-- Bootstrap js (after jquery dependency) -->
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+   <script type="text/javascript" src="js/angular-toggle-switch.min.js"></script>
+
+   <!-- angular UI bootstrap -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js"></script>
+
+   <!-- Google charts -->
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+   <!-- Own JS -->
+   <script type="text/javascript" src="js/app.js"></script>
+   <script type="text/javascript" src="js/ctrl.js"></script>
+
+   <!-- Bootstrap css -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+   <link href="css/angular-toggle-switch-bootstrap-3.css" rel="stylesheet"/>
+
+   <!-- Angular css -->
+   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css"/>
+
+   <!-- own css -->
+   <link rel="stylesheet" type="text/css" href="css/home.css" media="all">
+
+  <meta charset="UTF-8">
+	<title>Électricien | Alan Legros | Alan Électricité</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <meta name="description" content="Alan Legros, entrepreneur électricien offrant des services en éléctricité, vidéo surveillance, alarme et rénovation.">
+  <meta name="keywords" content="électricien, électricité, entrepreneur, Saint-saëns, Paris, rénovation, Normandie, Seine-Maritime, 76, Rouen, vidéo surveillance, alarme, rénovation">
+  <!-- <link rel="canonical" href="<WebsiteLink>"> -->
+  <meta property="og:locale" content="en_FR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Électricien | Alan Legros | Alan Électricité">
+  <meta property="og:description" content="Alan Legros est un entrepreneur électricien offrant des services en éléctricité, vidéo surveillance, alarme et rénovation.">
+  <!-- <meta property="og:url" content="<WebsiteLink>"> -->
+  <meta property="og:site_name" content="Alan Électricité">
+  <meta property="og:image" content="image/logo.png">
+  <meta property="og:image:secure_url" content="image/logo.png">
+  <!-- <link rel="shortlink" href="<WebsiteLink>"> -->
+  <!-- icon -->
+  <!-- <link rel="icon"  href="<IconLink>" type="image/logo.png"> -->
+</head>
+<body ng-controller="AppCtrl">
+  <div class="branding">
+    <div class="branding-content">
+      <a href="#" class="branding-info"><img id="logo" class="home-logo" src="image/logo.png" alt="Alan Électricité"></a>
+    </div>
+    <div class="branding-content">
+      <h1 id="name" class="branding-name">Alan Legros</h1>
+      <a href="#"><img id="banner" class="home-logo branding-info" src="image/logo4.png" alt="Alan Électricité"></a>
+    </div>
+    <div class="branding-content">
+      <div class="branding-coordonnees">
+        <span class="branding-icon glyphicon glyphicon-earphone"></span>
+        <p id="tel">06 76 12 55 52</p>
+      </div>
+      <div class="branding-coordonnees">
+        <span class="branding-icon	glyphicon glyphicon-envelope"></span>
+        <p id="mail">legrosalan76000@gmail.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="banner">Électricité - Alarme - Vidéo Surveillance - Travaux de rénovation</div>
+  <div class="content">
+    <md-content class="md-padding">
+      <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+        <md-nav-item md-nav-click="goto('accueil')" name="accueil">
+          Accueil
+        </md-nav-item>
+        <md-nav-item md-nav-click="goto('services')" name="services">
+          Services
+        </md-nav-item>
+        <md-nav-item md-nav-click="goto('contact')" name="contact">
+          Contact
+        </md-nav-item>
+      </md-nav-bar>
+      <div class="ext-content" ng-if="currentNavItem==='accueil'">
+        <div ng-controller="CarouselCtrl" class="slides_control">
+          <uib-carousel interval="myInterval">
+            <uib-slide ng-repeat="slide in slides" active="slide.active">
+              <img ng-src="{{slide.image}}">
+              <div class="carousel-title">
+                <h4>{{slide.title}}</h4>
+              </div>
+            </uib-slide>
+          </uib-carousel>
+        </div>
+      </div>
+      <div class="ext-content" ng-if="currentNavItem==='services'">
+        Les différents services.
+      </div>
+      <div class="ext-content" ng-if="currentNavItem==='contact'">
+        Contact.
+      </div>
+    </md-content>
+  </div>
+</body>
