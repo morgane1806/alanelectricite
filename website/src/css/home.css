@@ -138,3 +138,43 @@ ol.carousel-indicators > li.ng-scope {
   }
 
 }
+
+
+/*NAVBAR BOOTSTRAP*/
+
+.in-header{
+  height: 100%;
+}
+
+.navbar-header{
+  height: 130px;
+  text-align: center;
+}
+
+.home-logo{
+  /*height: 100%;*/
+
+}
+
+.navbar-middle{
+  margin-left: ;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+}
+
+.nav>li {
+  margin: 40px 8%;
+}
+
+.navbar-element{
+  font-size: 30px;
+}
+
+.navbar-right{
+  margin-right: 20px !important;
+  margin-top: 10px;
+}

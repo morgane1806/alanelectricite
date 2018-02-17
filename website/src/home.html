@@ -55,52 +55,78 @@
   <!-- <link rel="icon"  href="<IconLink>" type="image/logo.png"> -->
 </head>
 <body>
-  <div class="branding">
-    <div class="branding-content">
-      <a href="#" class="branding-info"><img id="logo" class="home-logo" src="image/logo.png" alt="Alan Électricité"></a>
+
+<nav class="navbar navbar-default navbar-header">
+  <div class="container-fluid">
+    <div class="navbar-header in-header">
+      <a class="navbar-brand home-logo" href="/"><img id="logo" class="home-logo" src="image/logo.png" alt="Alan Électricité"></a>
     </div>
-    <div class="branding-content">
-      <h1 id="name" class="branding-name">Alan Legros</h1>
-      <a href="#"><img id="banner" class="home-logo branding-info" src="image/logo4.png" alt="Alan Électricité"></a>
-    </div>
-    <div class="branding-content">
-      <div class="branding-coordonnees">
-        <span class="branding-icon glyphicon glyphicon-earphone"></span>
+    <ul class="nav navbar-nav in-header">
+      <li><a href="#" class="navbar-element">Accueil</a></li>
+      <li><a href="#" class="navbar-element">Contact</a></li>
+      <li><a href="#" class="navbar-element">Activité</a></li>
+    </ul>
+    <div class="navbar-right in-header">
+      <h4>
+        Alan Legros
+      </h4>
+      <div>
         <p id="tel">06 76 12 55 52</p>
-      </div>
-      <div class="branding-coordonnees">
-        <span class="branding-icon	glyphicon glyphicon-envelope"></span>
         <p id="mail">legrosalan76000@gmail.com</p>
       </div>
     </div>
   </div>
-  <div class="banner">Électricité - Alarme - Vidéosurveillance - Travaux de rénovation</div>
+</nav>
+
+  <!--<header>-->
+    <!--<div class="branding">-->
+      <!--<div class="branding-content">-->
+        <!--<a href="#" class="branding-info"><img id="logo" class="home-logo" src="image/logo.png" alt="Alan Électricité"></a>-->
+      <!--</div>-->
+      <!--<div class="branding-content">-->
+        <!--<h1 id="name" class="branding-name">Alan Legros</h1>-->
+        <!--<a href="#"><img id="banner" class="home-logo branding-info" src="image/logo4.png" alt="Alan Électricité"></a>-->
+      <!--</div>-->
+      <!--<div class="branding-content">-->
+        <!--<div class="branding-coordonnees">-->
+          <!--<span class="branding-icon glyphicon glyphicon-earphone"></span>-->
+          <!--<p id="tel">06 76 12 55 52</p>-->
+        <!--</div>-->
+        <!--<div class="branding-coordonnees">-->
+          <!--<span class="branding-icon	glyphicon glyphicon-envelope"></span>-->
+          <!--<p id="mail">legrosalan76000@gmail.com</p>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</header>-->
+
+  <!--<div class="banner">Électricité - Alarme - Vidéosurveillance - Travaux de rénovation</div>-->
   <div class="content" ng-controller="AppCtrl">
     <md-content class="md-padding">
-      <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-        <md-nav-item md-nav-click="goto('accueil')" name="accueil">
-          Accueil
-        </md-nav-item>
-        <md-nav-item md-nav-click="goto('contact')" name="contact">
-          Contact
-        </md-nav-item>
-        <md-nav-item md-nav-click="goto('services')" name="electricite">
-          Électricité
-        </md-nav-item>
-        <md-nav-item md-nav-click="goto('services')" name="alarmeintrusion">
-          Alarme anti-intrusion
-        </md-nav-item>
-        <md-nav-item md-nav-click="goto('services')" name="alarmeincendie">
-          Alarme anti-incendie
-        </md-nav-item>
-        <md-nav-item md-nav-click="goto('services')" name="videosurveillance">
-          Vidéosurveillance
-        </md-nav-item>
-        <md-nav-item md-nav-click="goto('services')" name="autres">
-          Autres prestations
-        </md-nav-item>
-      </md-nav-bar>
-      <div class="ext-content" ng-if="currentNavItem==='accueil'">
+      <!--<md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">-->
+        <!--<md-nav-item md-nav-click="goto('accueil')" name="accueil">-->
+          <!--Accueil-->
+        <!--</md-nav-item>-->
+        <!--<md-nav-item md-nav-click="goto('contact')" name="contact">-->
+          <!--Contact-->
+        <!--</md-nav-item>-->
+        <!--<md-nav-item md-nav-click="goto('services')" name="electricite">-->
+          <!--Électricité-->
+        <!--</md-nav-item>-->
+        <!--<md-nav-item md-nav-click="goto('services')" name="alarmeintrusion">-->
+          <!--Alarme anti-intrusion-->
+        <!--</md-nav-item>-->
+        <!--<md-nav-item md-nav-click="goto('services')" name="alarmeincendie">-->
+          <!--Alarme anti-incendie-->
+        <!--</md-nav-item>-->
+        <!--<md-nav-item md-nav-click="goto('services')" name="videosurveillance">-->
+          <!--Vidéosurveillance-->
+        <!--</md-nav-item>-->
+        <!--<md-nav-item md-nav-click="goto('services')" name="autres">-->
+          <!--Autres prestations-->
+        <!--</md-nav-item>-->
+      <!--</md-nav-bar>-->
+      <div class="ext-content">
         <div ng-controller="CarouselCtrl" class="slides_control">
           <uib-carousel interval="myInterval">
             <uib-slide ng-repeat="slide in slides" active="slide.active">
@@ -116,14 +142,14 @@
           L’entreprise propose également d’autres services : pose de placostil et isolation intérieure ainsi que de la rénovation intérieure, de cuisine et de salle de bain.</br>
         </div>
       </div>
-      <div class="ext-content" ng-if="currentNavItem==='contact'">
+      <div class="ext-content">
         LEGROS Alan</br>
         06 76 12 55 52</br>
         legrosalan76000@gmail.com
 
         <!-- TODO (plan mappy pour situer l’entreprise, un plan où les personne peuvent bouger sur la carte) -->
       </div>
-      <div class="ext-content" ng-if="currentNavItem==='electricite'">
+      <div class="ext-content">
         Réalisation d’installation électrique en fonction de vos besoins que ce soit dans du neuf ou pour de la rénovation, pour du particulier ou des professionnels.
         <ul>
           <li>Pose d’éclairage LED intérieur et extérieur = réduction des coûts, éclairage haute qualité, basse consommation.</li>
@@ -133,7 +159,7 @@
           <li>Pour les professionnels : réalisation de pieuvres électriques et d’armoires industrielles.</li>
         </ul>
       </div>
-      <div class="ext-content" ng-if="currentNavItem==='alarmeintrusion'">
+      <div class="ext-content">
         Installation d’alarme anti-intrusion pour vous rassurer et sécuriser votre maison contre les cambriolages.</br>
         <ul>
           <li>Alarme filaire (avec passage de câble) ou sans fil. Peuvent être extérieur et/ou intérieur.</li>
@@ -141,19 +167,19 @@
           <li>Mise en place si souhaité de systèmes autonomes qui se déclenchent en cas d’intrusion (aboiement chien, voix, canon de brouillard … etc).</li>
         </ul>
       </div>
-      <div class="ext-content" ng-if="currentNavItem==='alarmeincendie'">
+      <div class="ext-content">
         L’alarme incendie est aussi appelée SSI (Système de Sécurité Incendie).</br>
         Pour les professionnels étant des ERP (Etablissements Recevant du Public), installer un SSI est obligatoire pour assurer la sécurité des personnes se trouvant dans le bâtiment.</br>
         La réglementation française précise quels sont les équipements à installer selon le type d’ERP, ainsi que les obligations régentant la présence des équipements de sécurité dans le bâtiment.</br>
         Il est possible pour les particuliers qui souhaite se prémunir contre les incendies d’installer chez vous une alarme anti-incendie. </br>
       </div>
-      <div class="ext-content" ng-if="currentNavItem==='videosurveillance'">
+      <div class="ext-content">
         Installation de caméras ou dômes IP (protocole internet = mise en réseau). Ce sont des caméras dernière génération avec des images de qualité.</br>
         Grâce à la domotique vous pouvez avoir accès aux images de votre domicile, cours, locaux… 24h/24.</br>
         En fonction des besoins et des budgets il est possible de mettre différents types de caméras avec différentes résolution, taille, infra rouge … </br>
         Ces caméras sont reliées à un stockeur (enregistrement des images possible), auquel un écran peut être associé.</br>
       </div>
-      <div class="ext-content" ng-if="currentNavItem==='autres'">
+      <div class="ext-content">
         Pose de placostil dans du neuf ou de la rénovation.</br>
         Pose isolation (laine de verre, de roche, de bois).</br>
         Rénovation intérieur : pose de parquet, sols stratifiés …</br>
