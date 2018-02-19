@@ -71,91 +71,162 @@
       </div>
     </div>
   </div>
-  <div class="banner">Électricité - Alarme - Vidéosurveillance - Travaux de rénovation</div>
+  <div class="banner">Électricité - Alarme - Vidéo surveillance - Travaux de rénovation</div>
   <div class="content" ng-controller="AppCtrl">
     <md-content class="md-padding">
       <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
         <md-nav-item md-nav-click="goto('accueil')" name="accueil">
           Accueil
         </md-nav-item>
-        <md-nav-item md-nav-click="goto('contact')" name="contact">
-          Contact
+        <!-- <md-nav-item md-nav-click="goto('services')" name="electricite" ng-click="toggle=!toggle" ng-mouseover="toggle=!toggle">
+          <md-select ng-model="item1" ng-model-options="{trackBy: '$value'}"  >
+            <md-option ng-value="currentNavItem" name="alarmeincendie">Alarme</md-option>
+          </md-select>
+        </md-nav-item> -->
+        <md-nav-item md-nav-click="goto('services')" name="services">
+          Services
         </md-nav-item>
-        <md-nav-item md-nav-click="goto('services')" name="electricite">
-          Électricité
-        </md-nav-item>
-        <md-nav-item md-nav-click="goto('services')" name="alarmeintrusion">
-          Alarme anti-intrusion
-        </md-nav-item>
-        <md-nav-item md-nav-click="goto('services')" name="alarmeincendie">
-          Alarme anti-incendie
+        <!-- <md-nav-item md-nav-click="goto('services')" name="alarmeincendie">
+          Alarme incendie
         </md-nav-item>
         <md-nav-item md-nav-click="goto('services')" name="videosurveillance">
-          Vidéosurveillance
+          Vidéo surveillance
         </md-nav-item>
         <md-nav-item md-nav-click="goto('services')" name="autres">
           Autres prestations
+        </md-nav-item> -->
+        <md-nav-item md-nav-click="goto('contact')" name="contact">
+          Contact
         </md-nav-item>
       </md-nav-bar>
       <div class="ext-content" ng-if="currentNavItem==='accueil'">
         <div ng-controller="CarouselCtrl" class="slides_control">
           <uib-carousel interval="myInterval">
             <uib-slide ng-repeat="slide in slides" active="slide.active">
-              <img ng-src="{{slide.image}}">
+              <img ng-src="{{slide.image}}" class="carousel-image">
               <div class="carousel-title">
                 <h4>{{slide.title}}</h4>
               </div>
             </uib-slide>
           </uib-carousel>
-          Située à SAINT-SAENS en Seine Maritime, l’entreprise ALAN ELECTRICITE gérée par LEGROS Alan, est spécialisée dans le domaine de l’électricité, l’installation d’alarme anti-intrusion, anti- incendie et de vidéosurveillance. </br>
-          L’entreprise vous garantie un travail de qualité par ses devis personnalisés, ses conseils ainsi qu’un travail consciencieux.</br>
-          Elle s’adresse aux particuliers comme aux professionnels, réponds aux demandes et besoins de chacun avec le même professionnalisme.</br>
-          L’entreprise propose également d’autres services : pose de placostil et isolation intérieure ainsi que de la rénovation intérieure, de cuisine et de salle de bain.</br>
+        </div>
+        <div class="section">
+          <div class="section-title">Présentation</div>
+          <div class="section-content">
+            <div class="section-text">
+              Située à Saint-Saëns en Seine-Maritime à 30 minutes de <span class="bold">Rouen</span>, l’entreprise ALAN ELECTRICITE gérée par <strong>LEGROS Alan</strong>, est spécialisée dans le domaine de l’électricité, l’installation d’alarme anti-intrusion, anti-incendie et de vidéo-surveillance. </br>
+              Nous vous garantissons un travail de qualité par des <span class="bold">devis personnalisés</span>, des conseils ainsi qu’un travail consciencieux.</br>
+              Nous nous adressons aux particuliers comme aux professionnels, répondons aux demandes et besoins de chacun avec le même professionnalisme.</br>
+              Nous vous proposons également d’autres services comme la pose de placostil et d'isolation intérieure ainsi que la rénovation intérieure, de cuisine et de salle de bain.</br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ext-content" ng-if="currentNavItem==='services'">
+        <div class="section shadow">
+          <div class="section-title">Électricté</div>
+          <div class="section-content">
+            <div class="section-text">
+              Réalisation d’installations électriques en fonction de vos besoins que ce soit pour un logement neuf ou en rénovation, pour des particuliers ou professionnels.
+              <ul>
+                <li>Pose d’éclairage LED intérieur et extérieur basse consommation réduisant les coûts et fournissant un éclairage haute qualité.</li>
+                <li>Domotique = ensemble des techniques de gestion automatisée appliquée à l’habitation et locaux professionnels afin de vous apporter du confort, de la sécurité et une communication à distance avec une connexion à votre Smartphone.</li>
+                <li>Pose de chauffage au sol électrique basse consommation, de radiateur électrique nouvelle génération (réduction des coûts d’environ 30 %, radiateur haute qualité, basse consommation).</li>
+                <li>Motorisation de volets roulants neufs ou déjà existants, de portail (moteur enterré et bras) et de porte de garage. Toutes ces installations peuvent être également connectées par domotique.</li>
+                <li>Pour les professionnels : réalisation de pieuvres électriques et d’armoires industrielles.</li>
+              </ul>
+            </div>
+            <div class="section-image section-image-electricite">
+              <img alt="Électricité" src="image/electricite.JPG">
+            </div>
+          </div>
+        </div>
+        <div class="section shadow">
+          <div class="section-title">Alarme intrusion</div>
+          <div class="section-content">
+            <div class="section-text">
+              Installation d’alarme anti-intrusion pour vous <span class="bold">rassurer et sécuriser</span> votre maison contre les cambriolages.</br>
+              <ul>
+                <li>Alarme filaire (avec passage de câble) ou sans fil, en intérieur et/ou en extérieur.</li>
+                <li><span class="bold">Surveillance 24/24</span> de votre maison grâce à la domotique (système connecté accessible à distance par Smartphone).</li>
+                <li>Mise en place possible de systèmes autonomes qui se déclenchent en cas d’intrusion (aboiement de chien, voix, canon de brouillard … etc).</li>
+              </ul>
+            </div>
+            <div class="section-image">
+              <img alt="Alarme" src="image/alarme1.JPG">
+            </div>
+          </div>
+        </div>
+        <div class="section shadow">
+          <div class="section-title">Alarme incendie</div>
+          <div class="section-content">
+            <div class="section-text">
+              L’alarme incendie est aussi appelée SSI (Système de Sécurité Incendie).</br>
+              Pour les professionnels étant des ERP (Etablissements Recevant du Public), installer un SSI est obligatoire pour assurer la sécurité des personnes se trouvant dans le bâtiment.</br>
+              La réglementation française précise quels sont les équipements à installer selon le type d’ERP, ainsi que les obligations régentant la présence des équipements de sécurité dans le bâtiment.</br>
+              Il est possible pour les particuliers qui souhaitent se prémunir contre les incendies d’installer chez vous une alarme anti-incendie. </br>
+           </div>
+          </div>
+        </div>
+        <div class="section shadow">
+          <div class="section-title">Vidéo surveillance</div>
+          <div class="section-content">
+            <div class="section-text">
+              Installation de <span class="bold">caméras ou dômes IP</span> (protocole internet = mise en réseau). Ce sont des caméras dernière génération avec des images de qualité.</br>
+              Grâce à la domotique vous pouvez avoir accès aux images de votre domicile, cours, locaux… 24/24.</br>
+              En fonction des besoins et des budgets il est possible de mettre différents types de caméras avec différentes résolutions, tailles, infra rouge … </br>
+              Ces caméras sont reliées à un stockeur (enregistrement des images possibles), auquel un écran peut être associé.</br>
+            </div>
+          </div>
+        </div>
+        <div class="section shadow">
+          <div class="section-title">Autres prestations</div>
+          <div class="section-text">
+            <ul>
+              <li>Pose de placostil dans des bâtiments neufs ou en rénovation.</li>
+              <li>Pose d'isolation (laine de verre, de roche, de bois).</li>
+              <li>Rénovation intérieure : pose de parquet, sols stratifiés, etc.</li>
+              <li>Pose de cuisine : installations des meubles, de l’électroménager et branchement des appareils.</li>
+              <li>Pose de salle de bain : installation des meubles, des vasques, bacs de douche et baignoires.</li>
+            </ul>
+          </div>
+          <div class="images-cote">
+            <img alt="Rénovation" src="image/placo3.JPG" class="image-cote">
+            <img alt="" src="image/placo4.JPG" class="image-cote">
+          </div>
+          <div class="images-cote">
+            <img alt="" src="image/portail1.jpg" class="image-cote">
+            <img alt="" src="image/sdb3.JPG" class="image-cote">
+          </div>
         </div>
       </div>
       <div class="ext-content" ng-if="currentNavItem==='contact'">
-        LEGROS Alan</br>
-        06 76 12 55 52</br>
-        legrosalan76000@gmail.com
-
+        <div class="section">
+          <div class="section-title">Contacts</div>
+          <div class="section-content">
+            <div class="section-text">
+              N’hésitez pas à nous contacter pour tous renseignements.</br>
+              Ainsi que pour effectuer un devis sur mesure par rapport à vos besoins.</br>
+              Par téléphone : 06 76 12 55 52</br>
+              Par mail : legrosalan76000@gmail.com</br>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-title">EURL ALAN ELECTRICITE</div>
+          <div class="section-content">
+            <div class="section-text">
+              SIRET : 83357363700018</br>
+              <!-- Capital social : 1 500 euros</br> -->
+              N° TVA intracommunautaire : FR 07 833573637</br>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="section">
+          <div class="section-title">Localisation</div>
+          <img alt="Normandie" src="image/localisation.JPG">
+        </div> -->
         <!-- TODO (plan mappy pour situer l’entreprise, un plan où les personne peuvent bouger sur la carte) -->
-      </div>
-      <div class="ext-content" ng-if="currentNavItem==='electricite'">
-        Réalisation d’installation électrique en fonction de vos besoins que ce soit dans du neuf ou pour de la rénovation, pour du particulier ou des professionnels.
-        <ul>
-          <li>Pose d’éclairage LED intérieur et extérieur = réduction des coûts, éclairage haute qualité, basse consommation.</li>
-          <li>Domotique = ensemble des techniques de gestion automatisée appliquée à l’habitation et locaux professionnels afin de vous apporter du confort, de la sécurité et une communication à distance avec une connexion à votre Smartphone.</li>
-          <li>Pose de chauffage au sol électrique basse consommation, de radiateur électrique nouvelle génération (réduction des coûts d’environ 30%, radiateur haute qualité, basse consommation).</li>
-          <li>Motorisation en neuf ou rénovation de volets roulants, de portail (moteur enterré et bras) et de porte de garage. Toutes peuvent être si possible connectés par domotique.</li>
-          <li>Pour les professionnels : réalisation de pieuvres électriques et d’armoires industrielles.</li>
-        </ul>
-      </div>
-      <div class="ext-content" ng-if="currentNavItem==='alarmeintrusion'">
-        Installation d’alarme anti-intrusion pour vous rassurer et sécuriser votre maison contre les cambriolages.</br>
-        <ul>
-          <li>Alarme filaire (avec passage de câble) ou sans fil. Peuvent être extérieur et/ou intérieur.</li>
-          <li>Surveillance 24h/24 de votre maison  grâce à la domotique (système connecté accessible à distance par Smartphone).</li>
-          <li>Mise en place si souhaité de systèmes autonomes qui se déclenchent en cas d’intrusion (aboiement chien, voix, canon de brouillard … etc).</li>
-        </ul>
-      </div>
-      <div class="ext-content" ng-if="currentNavItem==='alarmeincendie'">
-        L’alarme incendie est aussi appelée SSI (Système de Sécurité Incendie).</br>
-        Pour les professionnels étant des ERP (Etablissements Recevant du Public), installer un SSI est obligatoire pour assurer la sécurité des personnes se trouvant dans le bâtiment.</br>
-        La réglementation française précise quels sont les équipements à installer selon le type d’ERP, ainsi que les obligations régentant la présence des équipements de sécurité dans le bâtiment.</br>
-        Il est possible pour les particuliers qui souhaite se prémunir contre les incendies d’installer chez vous une alarme anti-incendie. </br>
-      </div>
-      <div class="ext-content" ng-if="currentNavItem==='videosurveillance'">
-        Installation de caméras ou dômes IP (protocole internet = mise en réseau). Ce sont des caméras dernière génération avec des images de qualité.</br>
-        Grâce à la domotique vous pouvez avoir accès aux images de votre domicile, cours, locaux… 24h/24.</br>
-        En fonction des besoins et des budgets il est possible de mettre différents types de caméras avec différentes résolution, taille, infra rouge … </br>
-        Ces caméras sont reliées à un stockeur (enregistrement des images possible), auquel un écran peut être associé.</br>
-      </div>
-      <div class="ext-content" ng-if="currentNavItem==='autres'">
-        Pose de placostil dans du neuf ou de la rénovation.</br>
-        Pose isolation (laine de verre, de roche, de bois).</br>
-        Rénovation intérieur : pose de parquet, sols stratifiés …</br>
-        Pose de cuisine : installations des meubles, de l’électroménager, branchement des appareils.</br>
-        Pose de salle de bain : installation des meubles, des vasques, bacs de douche, baignoires.</br>
       </div>
     </md-content>
   </div>
