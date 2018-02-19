@@ -7,6 +7,19 @@ body {
   overflow: auto;
 }
 
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #999;
+}
+
 /* Branding */
 
 .home-logo {
@@ -58,11 +71,23 @@ body {
 /* Navbar and content */
 
 .content {
-  width: 100%;
+  display: flex;
+  flex: 1;
+}
+
+md-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.ext-content {
+  flex: 1;
+  /* height: 100%; */
+  overflow: auto;
 }
 
 md-content .ext-content {
-  padding: 50px;
+  padding: 25px;
   padding-top: 0px;
   padding-bottom: 0px;
   margin: 20px;
@@ -75,6 +100,20 @@ md-content {
 md-nav-bar md-nav-ink-bar {
   background: black;
 }
+/*
+md-select.md-default-theme .md-select-value, md-select .md-select-value {
+  border: none;
+}
+
+md-select {
+  margin: auto;
+  height: 24px;
+  vertical-align: middle;
+}
+
+_md-nav-button md-accent md-button ng-scope md-ink-ripple md-unselected {
+  height: 48px;
+} */
 
 .md-button.md-accent {
   color: black;
@@ -92,7 +131,12 @@ ul._md-nav-bar-list {
 
 /* Carousel */
 
-img {
+.slides_control.ng-scope, .carousel-iner {
+  width: 75%;
+  margin: auto;
+}
+
+.carousel-image {
   margin: auto;
   width: 100%;
 }
@@ -112,8 +156,96 @@ ol.carousel-indicators > li.ng-scope {
   background: rgba(0,0,0,0.5);
 }
 
+.shadow {
+   -moz-box-shadow:    inset 0 0 8px rgba(0, 0, 0, 0.2);
+   -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+   box-shadow:         inset 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.section {
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.section-content {
+  display: flex;
+}
+
+.section-title {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  font-size: 22px;
+}
+
+.section-image {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.section-image::before {
+  display: block;
+  content: '';
+  padding-bottom: 52%;
+}
+
+.section-image img {
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.section-text {
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.images-cote {
+  /* width: 100%; */
+  /* display: flex; */
+  /* margin: auto; */
+  align-items: center;
+  text-align: center;
+}
+
+.image-cote {
+  width: 48%;
+  margin: auto;
+  padding: 10px;
+}
+
+@media (max-width: 1000px) {
+  .slides_control.ng-scope, .carousel-iner {
+    width: 95%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .section-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-image {
+    margin-left: 0;
+  }
+}
+
 /* Responsive Design mobile */
-@media screen and (max-width: 700px) {
+@media (max-width: 762px) {
 
   /* Branding */
 
@@ -129,12 +261,34 @@ ol.carousel-indicators > li.ng-scope {
   }
 
   ul._md-nav-bar-list {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   .md-nav-bar {
     max-width: 100%;
   }
 
+  .branding-coordonnees {
+    font-size: 10px;
+    max-width: 100px;
+    word-break: break-all;
+  }
+
+  .image-cote {
+    width: 90%;
+    margin: auto;
+  }
+
+  .section {
+    padding: 5px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .section-content {
+    font-size: 12px;
+  }
 }

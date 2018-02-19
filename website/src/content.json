@@ -1,0 +1,43 @@
+{
+  "content": {
+    "accueil": {
+      "title": "Accueil",
+      "text": "Située à Saint-Saëns en Seine-Maritime à 30 minutes de Rouen, l’entreprise ALAN ELECTRICITE gérée par LEGROS Alan, est spécialisée dans le domaine de l’électricité, l’installation d’alarme anti-intrusion, anti-incendie et de vidéo-surveillance. </br>
+        Nous vous garantissons un travail de qualité par des devis personnalisés, des conseils ainsi qu’un travail consciencieux.</br>
+        Nous nous adressons aux particuliers comme aux professionnels, répondons aux demandes et besoins de chacun avec le même professionnalisme.</br>
+        Nous vous proposons également d’autres services comme la pose de placostil et d'isolation intérieure ainsi que la rénovation intérieure, de cuisine et de salle de bain.</br>"
+    },
+    "electricite": {
+      "title": "Électricité",
+      "text": "        Réalisation d’installations électriques en fonction de vos besoins que ce soit pour un logement neuf ou en rénovation, pour des particuliers ou professionnels.
+        <ul>
+          <li>Pose d’éclairage LED intérieur et extérieur basse consommation réduisant les coûts et fournissant un éclairage haute qualité.</li>
+          <li>Domotique = ensemble des techniques de gestion automatisée appliquée à l’habitation et locaux professionnels afin de vous apporter du confort, de la sécurité et une communication à distance avec une connexion à votre Smartphone.</li>
+          <li>Pose de chauffage au sol électrique basse consommation, de radiateur électrique nouvelle génération (réduction des coûts d’environ 30 %, radiateur haute qualité, basse consommation).</li>
+          <li>Motorisation de volets roulants neufs ou déjà existants, de portail (moteur enterré et bras) et de porte de garage. Toutes ces installations peuvent être également connectées par domotique.</li>
+          <li>Pour les professionnels : réalisation de pieuvres électriques et d’armoires industrielles.</li>
+        </ul>"
+      },
+      "alarmeintrusion": {
+        "title": "Alarme intrusion",
+        "text": "Installation d’alarme anti-intrusion pour vous rassurer et sécuriser votre maison contre les cambriolages.</br>
+          <ul>
+            <li>Alarme filaire (avec passage de câble) ou sans fil, en intérieur et/ou en extérieur.</li>
+            <li>Surveillance 24h/24h de votre maison grâce à la domotique (système connecté accessible à distance par Smartphone).</li>
+            <li>Mise en place possible de systèmes autonomes qui se déclenchent en cas d’intrusion (aboiement de chien, voix, canon de brouillard … etc).</li>
+          </ul>"
+      },
+      "alarmeincendie": {
+        "title": "Alarme incendie",
+        "text": "        L’alarme incendie est aussi appelée SSI (Système de Sécurité Incendie).</br>
+          Pour les professionnels étant des ERP (Etablissements Recevant du Public), installer un SSI est obligatoire pour assurer la sécurité des personnes se trouvant dans le bâtiment.</br>
+          La réglementation française précise quels sont les équipements à installer selon le type d’ERP, ainsi que les obligations régentant la présence des équipements de sécurité dans le bâtiment.</br>
+          Il est possible pour les particuliers qui souhaitent se prémunir contre les incendies d’installer chez vous une alarme anti-incendie. </br>"
+      },
+      "videosurveillance": {
+        "title": "Vidéo surveillance",
+        "text": ""
+      }
+    }
+  }
+}
