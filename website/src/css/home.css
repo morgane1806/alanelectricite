@@ -7,19 +7,6 @@ body {
   overflow: auto;
 }
 
-::-webkit-scrollbar
-{
-	width: 12px;
-	background-color: #F5F5F5;
-}
-
-::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #999;
-}
-
 /* Branding */
 
 .home-logo {
@@ -100,20 +87,6 @@ md-content {
 md-nav-bar md-nav-ink-bar {
   background: black;
 }
-/*
-md-select.md-default-theme .md-select-value, md-select .md-select-value {
-  border: none;
-}
-
-md-select {
-  margin: auto;
-  height: 24px;
-  vertical-align: middle;
-}
-
-_md-nav-button md-accent md-button ng-scope md-ink-ripple md-unselected {
-  height: 48px;
-} */
 
 .md-button.md-accent {
   color: black;
@@ -226,37 +199,54 @@ ol.carousel-indicators > li.ng-scope {
   padding: 10px;
 }
 
-@media (max-width: 1000px) {
+@media all and (min-width: 901px) {
+  ::-webkit-scrollbar
+  {
+  	width: 12px;
+  	background-color: #F5F5F5;
+  }
+
+  ::-webkit-scrollbar-thumb
+  {
+  	border-radius: 10px;
+  	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  	background-color: #999;
+  }
+}
+
+@media all and (max-width: 1000px) {
   .slides_control.ng-scope, .carousel-iner {
     width: 95%;
     margin: auto;
   }
 }
 
-@media (max-width: 900px) {
-  .section-content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .section-image {
-    margin-left: 0;
-  }
-}
 
 /* Responsive Design mobile */
-@media (max-width: 762px) {
+@media all and (max-width: 900px) {
+
+  .app {
+    overflow: auto;
+
+  }
+
+  .ext-content {
+    flex: none;
+    overflow: none;
+  }
+
+  md-content {
+    overflow: hidden;
+  }
 
   /* Branding */
-
   .home-logo {
     max-width: 70px;
   }
 
   /* Navbar and content */
-
   md-content .ext-content {
-    padding: 20px;
+    padding: 10px;
     margin: 0px;
   }
 
@@ -285,10 +275,16 @@ ol.carousel-indicators > li.ng-scope {
   }
 
   .section-title {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .section-content {
-    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    font-size: 11<px;
+  }
+
+  .section-image {
+    margin-left: 0;
   }
 }
